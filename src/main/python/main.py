@@ -5,8 +5,7 @@ import re
 
 class CodingChallenge:
 
-    sampleInput1 = [[1, 2, 3], [10, 15, 5], [100, 999, 500]]
-    numberOfLists = 3
+    sampleInput1 = [[1, 2, 3], [10, 15, 5], [100, 999, 500]]    
     sampleInput2 = "ab1231da"
 
     def main(self):
@@ -43,8 +42,7 @@ class CodingChallengeTest(unittest.TestCase):
         expectedValue = [2, 10, 500]
 
         self.assertEqual(actualValue, expectedValue)
-        print("test 1 completed: actual value is " + str(actualValue) + " and expected value is " + str(expectedValue))
-        pass
+        print("test 1 completed: actual value is " + str(actualValue) + " and expected value is " + str(expectedValue))        
 
     def testProb2(self):
         sampleInput2 = "ab1231da"
@@ -53,8 +51,7 @@ class CodingChallengeTest(unittest.TestCase):
         expectedValue = 7
 
         self.assertEqual(actualValue, expectedValue)
-        print("test 2 completed: actual value is " + str(actualValue) + " and expected value is " + str(expectedValue))
-        pass
+        print("test 2 completed: actual value is " + str(actualValue) + " and expected value is " + str(expectedValue))        
 
 if __name__ == '__main__':
     unittest.main()
