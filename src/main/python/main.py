@@ -1,4 +1,3 @@
-import numpy
 import unittest
 import re
 
@@ -54,7 +53,6 @@ class CodingChallengeTest(unittest.TestCase):
         print("test 2 completed: actual value is " + str(actualValue) + " and expected value is " + str(expectedValue))        
 
 if __name__ == '__main__':
-    unittest.main()
-    # CodingChallengeTest.main()
+    unittest.main()    
     # C = CodingChallenge()
     # C.main()
