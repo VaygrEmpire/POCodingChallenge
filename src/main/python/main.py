@@ -1,25 +1,43 @@
 import unittest
 
 class CodingChallenge:
+    lst = []
 
     def main(self):
-        self.largestGap()
+        self.largestGap(self.lst)
 
-    def largestGap(self):
-        lst = []
+    def largestGap(self, a):
 
         try:
             while True:
-                lst.append(int(input("Enter number of elements: ")))
+                n = int(input("Enter length of list: "))
+                for i in range(0, n):
+                    self.lst.append(int(input("Enter number of elements: ")))
+                break
 
         except:
             print("Please enter only numbers.")
 
-        result = [x-lst[i-1] for i, x in enumerate(lst)][1:]
-        print(result)
+        self.lst.sort()
+        differencesList = [x-self.lst[i-1] for i, x in enumerate(self.lst)][1:]
+        result = max(differencesList)
+        return result
+
+class CodingChallengeTest(unittest.TestCase):
+    CC = CodingChallenge()
+
+    def testProb1(self):
+        sampleInput = [9, 4, 26, 26, 0, 0, 5, 20, 6, 25, 5]
+
+        actualValue = self.CC.largestGap(sampleInput)
+        expectedValue = 11
+
+        self.assertEqual(actualValue, expectedValue)
+        print("test 1 completed: actual value is " + str(actualValue) + " and expected value is " + str(expectedValue))
 
 if __name__ == '__main__':
-    C = CodingChallenge
-    C.main()
+    unittest.main()
+    # C = CodingChallenge()
+    # C.main()
 
 
