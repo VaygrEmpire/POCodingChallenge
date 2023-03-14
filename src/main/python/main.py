@@ -5,11 +5,11 @@ class CodingChallenge:
     def main(self):
 
         try:
-            a = input(int("Please enter first number"))
-            b = input(int("Please enter second number"))
+            a = int(input("Please enter first number: "))
+            b = int(input("Please enter second number: "))
 
             if (a != None or b != None):
-                self.sumOfNumbers(a, b)
+                print("Sum of Numbers are: ", self.sumOfNumbers(a, b))
         except:
             print("Please enter only numbers.")
 
@@ -18,7 +18,7 @@ class CodingChallenge:
     # Create a function that takes two numbers as arguments and returns their sum.
     def sumOfNumbers(self, x, y):
         result = x+y
-        print(result)
+        return result
 
 class CodingChallengeTest(unittest.TestCase):
     CC = CodingChallenge()
