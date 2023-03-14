@@ -3,17 +3,17 @@ import unittest
 class CodingChallenge:
 
     def main(self):
-        a, b = None
 
         try:
             a = input(int("Please enter first number"))
             b = input(int("Please enter second number"))
 
+            if (a != None or b != None):
+                self.sumOfNumbers(a, b)
         except:
             print("Please enter only numbers.")
 
-        if (a != None or b != None):
-            self.sumOfNumbers(a, b)
+
 
     # Create a function that takes two numbers as arguments and returns their sum.
     def sumOfNumbers(self, x, y):
@@ -35,7 +35,7 @@ class CodingChallengeTest(unittest.TestCase):
 
 if __name__ == '__main__':
     # unittest.main()
-    C = CodingChallenge
+    C = CodingChallenge()
     C.main()
 
 
