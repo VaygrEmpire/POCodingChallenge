@@ -6,22 +6,29 @@ class CodingChallenge:
         self.sumOfNumbers()
 
     def sumOfNumbers(self, x, y):
-        lst = []
 
         try:
-            while True:
-                lst.append(int(input("Enter number of elements: ")))
+
+
 
         except:
             print("Please enter only numbers.")
 
-        result = [x-lst[i-1] for i, x in enumerate(lst)][1:]
+        result =
         print(result)
 
 class CodingChallengeTest(unittest.TestCase):
     CC = CodingChallenge()
 
+    def testProb1(self):
+        sampleInput1 = 3
+        sampleInput2 = 2
 
+        actualValue = self.CC.sumOfNumbers(sampleInput1, sampleInput2)
+        expectedValue = 5
+
+        self.assertEqual(actualValue, expectedValue)
+        print("test 1 completed: actual value is " + str(actualValue) + " and expected value is " + str(expectedValue))
 
 if __name__ == '__main__':
     # unittest.main()
