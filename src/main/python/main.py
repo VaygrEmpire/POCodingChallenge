@@ -3,9 +3,9 @@ import unittest
 class CodingChallenge:
 
     def main(self):
-        self.largestGap()
+        self.sumOfNumbers()
 
-    def largestGap(self):
+    def sumOfNumbers(self, x, y):
         lst = []
 
         try:
@@ -18,7 +18,13 @@ class CodingChallenge:
         result = [x-lst[i-1] for i, x in enumerate(lst)][1:]
         print(result)
 
+class CodingChallengeTest(unittest.TestCase):
+    CC = CodingChallenge()
+
+
+
 if __name__ == '__main__':
+    # unittest.main()
     C = CodingChallenge
     C.main()
 
