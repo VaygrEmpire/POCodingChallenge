@@ -2,23 +2,26 @@ import unittest
 
 class CodingChallenge:
 
+    a = 4
+    b = "4"
+    c = 29348
     def main(self):
 
         try:
-            a = 4
-            b = "4"
-            print(f"input a is {a}")
-            print(f'input b is "{b}"\n')
 
-            if (a != None):
-                print(f"convert int to str is: '{self.int_to_str(a)}'")
-            if (b != None):
-                print(f"convert str to int is: {self.str_to_int(b)}\n")
+            print(f"input a is {self.a}")
+            print(f'input b is "{self.b}"\n')
 
-            self.printOutput(str(a), "s", 0)
-            self.printOutput(str(b), "s", 1)
-            self.printOutput(int(a), "i", 0)
-            self.printOutput(int(b), "i", 1)
+            if (self.a != None or self.c != None):
+                print(f'convert int to str is: "{self.int_to_str(self.a)}"')
+                print(f'convert int to str is: "{self.int_to_str(self.c)}"')
+            if (self.b != None):
+                print(f"convert str to int is: {self.str_to_int(self.b)}\n")
+
+            self.printOutput(str(self.a), "s", 0)
+            self.printOutput(str(self.b), "s", 1)
+            self.printOutput(int(self.a), "i", 0)
+            self.printOutput(int(self.b), "i", 1)
 
         except:
             print("Try again")
@@ -60,16 +63,17 @@ class CodingChallenge:
         return x.__int__()
 
     def printOutput(self, function, s, i):
+
         if (s == "s"):
             if (i == 0):
-                print(f"de-drunk: output of str(a) is {function} and type of str(a) output is {type(function)}")
+                print(f'de-drunk: output of str({self.a}) is "{function}" and type of str(a) output is {type(function)}')
             elif (i == 1):
-                print(f"de-drunk: output of str(b) is {function} and type of str(b) output is {type(function)}")
+                print(f'de-drunk: output of str("{self.b}") is "{function}" and type of str(b) output is {type(function)}')
         else:
             if (i == 0):
-                print(f"de-drunk: output of int(a) is {function} and type of int(a) output is {type(function)}")
+                print(f"de-drunk: output of int({self.a}) is {function} and type of int(a) output is {type(function)}")
             elif (i == 1):
-                print(f"de-drunk: output of int(b) is {function} and type of int(b) output is {type(function)}")
+                print(f'de-drunk: output of int("{self.b}") is {function} and type of int(b) output is {type(function)}')
 
 class CodingChallengeTest(unittest.TestCase):
     CC = CodingChallenge()
