@@ -63,7 +63,6 @@ class CodingChallenge:
         return x.__int__()
 
     def printOutput(self, function, s, i):
-
         if (s == "s"):
             if (i == 0):
                 print(f'de-drunk: output of str({self.a}) is "{function}" and type of str(a) output is {type(function)}')
