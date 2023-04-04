@@ -5,30 +5,30 @@ class CodingChallenge:
     def main(self):
 
         try:
-            a = int(input("Please enter first number: "))
-            b = int(input("Please enter second number: "))
+            a = int(input("Please enter length: "))
+            b = int(input("Please enter width: "))
 
             if (a != None or b != None):
-                print("Sum of Numbers are: ", self.sumOfNumbers(a, b))
+                print("perimeter of rectangle is: ", self.find_perimeter(a, b))
         except:
             print("Please enter only numbers.")
 
 
 
-    # Create a function that takes two numbers as arguments and returns their sum.
-    def sumOfNumbers(self, x, y):
-        result = x+y
+    # Create a function that takes length and width and finds the perimeter of a rectangle.
+    def find_perimeter(self, length, width):
+        result = (length*2)+(width*2)
         return result
 
 class CodingChallengeTest(unittest.TestCase):
     CC = CodingChallenge()
 
     def testProb1(self):
-        sampleInput1 = 3
-        sampleInput2 = 2
+        sampleInput1 = 6
+        sampleInput2 = 7
 
-        actualValue = self.CC.sumOfNumbers(sampleInput1, sampleInput2)
-        expectedValue = 5
+        actualValue = self.CC.find_perimeter(sampleInput1, sampleInput2)
+        expectedValue = 26
 
         self.assertEqual(actualValue, expectedValue)
         print("test 1 completed: actual value is " + str(actualValue) + " and expected value is " + str(expectedValue))
